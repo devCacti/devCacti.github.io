@@ -374,7 +374,7 @@ function resizeCanvas() {
 var count = 0;
 var colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
 
-canvas.addEventListener('mousemove', function (e) {
+document.addEventListener('mousemove', function (e) {
 
     count++;
 
@@ -382,15 +382,15 @@ canvas.addEventListener('mousemove', function (e) {
 
     pointers[0].down = true;
     pointers[0].color = colorArr;
-    pointers[0].moved = pointers[0].down;
-    pointers[0].dx = (e.offsetX - pointers[0].x) * 10.0;
-    pointers[0].dy = (e.offsetY - pointers[0].y) * 10.0;
-    pointers[0].x = e.offsetX;
-    pointers[0].y = e.offsetY;
+    pointers[0].moved = true;
+    pointers[0].dx = (e.clientX - pointers[0].x) * 10.0;
+    pointers[0].dy = (e.clientY - pointers[0].y) * 10.0;
+    pointers[0].x = e.clientX;
+    pointers[0].y = e.clientY;
 
 });
 
-canvas.addEventListener('touchmove', function (e) {
+document.addEventListener('touchmove', function (e) {
 
     e.preventDefault();
 
@@ -421,22 +421,3 @@ canvas.addEventListener('touchmove', function (e) {
     }
 
 }, false);
-
-function m(t) {
-
-    for (var e, n = document.getElementById(t), i = n.innerHTML.replace("&amp;", "&").split(""), a = "", o = 0, s = i.length; s > o; o++) {
-        e = i[o].replace("&", "&amp");
-        a += e.trim() ? '<span class="letter-' + o + '">' + e + "</span>" : "&nbsp;";
-    }
-
-    n.innerHTML = a;
-
-    setTimeout(function () {
-        n.className = "transition-in";
-    }, 500 * Math.random() + 500);
-
-}
-
-window.onload = function () {
-    m("h1");
-};

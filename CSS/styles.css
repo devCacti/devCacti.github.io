@@ -1,8 +1,9 @@
 html,
 body {
     overflow: hidden;
-    font: 16px/1.4 'Lato', sans-serif;
+    font-family: 'Consolas', sans-serif;
     color: #fefeff;
+    text-shadow: #000000 0px 0px 10px;
 }
 
 body {
@@ -18,17 +19,22 @@ canvas {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    pointer-events: auto;
+    z-index: -1;
 }
 
+
 h1.title {
-    position: absolute;
-    margin: auto;
     text-align: center;
-    top: 0;
-    left: 0;
     font-size: 2em;
     text-align: center;
     color: #fefeff;
-    z-index: 1;
+    margin-top: 20px;
+}
+
+h2.subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fefeff;
 }
