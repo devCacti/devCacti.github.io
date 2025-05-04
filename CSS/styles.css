@@ -1,0 +1,34 @@
+html,
+body {
+    overflow: hidden;
+    font: 16px/1.4 'Lato', sans-serif;
+    color: #fefeff;
+}
+
+body {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+h1.title {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    text-align: center;
+    color: #fefeff;
+    z-index: 1;
+}
