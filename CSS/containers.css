@@ -12,6 +12,8 @@ div.repositories {
     align-items: center;
     max-width: 750px;
     margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     max-height: 500px;
     overflow-x: hidden;
@@ -21,6 +23,7 @@ div.repositories {
     border-radius: 50px;
     /* Blur Effect */
     backdrop-filter: blur(25px);
+    --webkit-backdrop-filter: blur(25px);
 }
 
 br.repositories {
@@ -40,12 +43,15 @@ main {
 
 .blur50 {
     backdrop-filter: blur(50px);
+    --webkit-backdrop-filter: blur(50px);
 }
 
 .blur25 {
     backdrop-filter: blur(25px);
+    --webkit-backdrop-filter: blur(25px);
 }
 
 .blur10 {
     backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
 }
