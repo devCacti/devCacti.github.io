@@ -5,7 +5,6 @@ body {
     text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
     cursor: none;
     scroll-behavior: smooth;
-    background-color: black;
     margin: 0;
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
