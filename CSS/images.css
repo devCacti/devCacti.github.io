@@ -5,6 +5,8 @@
     display: inline-block;
     justify-content: center;
     object-fit: cover;
+    border-radius: 100px;
+    transition: all 0.5s;
 }
 
 .gitprofile.medium {
@@ -12,15 +14,15 @@
     height: auto;
     object-fit: cover;
 
-    border-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     /* Background blurred effect */
-    opacity: 0.9;
+    opacity: 0.7;
     transition: all 0.5s ease-in-out;
 }
 
-.gitprofile.medium:hover {
+.gitprofile:hover {
+    backdrop-filter: blur(50px);
     opacity: 1;
     /*Scale up the profile on hover*/
     transform: scale(1.05);
