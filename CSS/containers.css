@@ -5,7 +5,10 @@
     width: 100%;
 }
 
-div.repositories {
+div.repositories,
+div.experience,
+div.aboutme,
+div.contact {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -19,14 +22,15 @@ div.repositories {
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
-    background-color: rgba(0, 0, 0, 0.441);
+    background-color: rgba(54, 54, 54, 0.237);
     border-radius: 50px;
     /* Blur Effect */
     backdrop-filter: blur(25px);
     --webkit-backdrop-filter: blur(25px);
 }
 
-br.repositories {
+br.repositories,
+br.experience {
     display: block;
     width: 100%;
     height: 500px;
@@ -39,6 +43,29 @@ main {
     -ms-overflow-style: none;
     height: 100vh;
     padding: 20px;
+}
+
+.index-title{
+    font-weight: 700;
+    color: #fff;
+    flex-direction: row;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.index-title h1, a {
+    font-size: 2.5rem;
+    color: #fff;
+
+    margin: 0;
+}
+
+.index-title a {
+    text-decoration: none;
+    color: #6082ff;
 }
 
 .blur50 {

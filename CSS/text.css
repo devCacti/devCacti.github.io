@@ -13,3 +13,37 @@ a {
     color: #fefeff;
     text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
 }
+
+.nickname {
+    color: #1ca500;
+    text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
+}
+
+/*Text aligned horizontally in the center*/
+.phrase {
+    text-align: center;
+    align-items: center;
+    color: #fefeff;
+    text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
+}
+
+.info.title {
+    text-decoration: underline;
+    text-shadow: rgb(255, 255, 255) 0px 0px 20px;
+    color: #fefeff;
+}
+
+.info.subtitle {
+    text-decoration: underline;
+}
+
+.no-deco {
+    text-decoration: none !important;
+}
+
+.contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
