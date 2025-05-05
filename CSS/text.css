@@ -1,0 +1,8 @@
+.title,
+.subtitle {
+    pointer-events: none;
+}
+
+* {
+    text-align: center;
+}

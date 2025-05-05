@@ -3,7 +3,8 @@ body {
     overflow: hidden;
     font-family: 'Consolas', sans-serif;
     color: #fefeff;
-    text-shadow: #000000 0px 0px 10px;
+    text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
+    cursor: none;
 }
 
 body {
