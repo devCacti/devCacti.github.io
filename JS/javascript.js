@@ -7,12 +7,12 @@ canvas.height = canvas.clientHeight;
 
 var config = {
     TEXTURE_DOWNSAMPLE: 1,
-    DENSITY_DISSIPATION: 0.99,
-    VELOCITY_DISSIPATION: 0.95,
+    DENSITY_DISSIPATION: 0.975,
+    VELOCITY_DISSIPATION: 0.99,
     PRESSURE_DISSIPATION: 0,
     PRESSURE_ITERATIONS: 50,
-    CURL: 0,
-    SPLAT_RADIUS: 0.005
+    CURL: 5,
+    SPLAT_RADIUS: 0.003
 };
 
 var pointers = [];
