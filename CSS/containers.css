@@ -56,7 +56,7 @@ main {
     margin-bottom: 10px;
 }
 
-.index-title h1, a {
+.index-title h1,.index-title a {
     font-size: 2.5rem;
     color: #fff;
 
