@@ -34,6 +34,7 @@ main {
     scrollbar-width: none;
     -ms-overflow-style: none;
     height: 100vh;
+    padding: 20px;
 }
 
 .blur50 {
