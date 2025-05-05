@@ -4,6 +4,7 @@
     text-align: center;
     display: inline-block;
     justify-content: center;
+    aspect-ratio: 1 / 1;
 }
 
 .gitprofile.medium {
