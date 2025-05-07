@@ -27,6 +27,7 @@ div.toc {
     scrollbar-width: none;
     background-color: rgba(54, 54, 54, 0.237);
     border-radius: 50px;
+    cursor: crosshair;
     /* Blur Effect */
     backdrop-filter: blur(25px);
     --webkit-backdrop-filter: blur(25px);
@@ -60,10 +61,38 @@ ul.experience-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
+}
+
+@media (max-width: 1200px) {
+
+    /* Adjust the max-width as needed for tablet screens */
+    ul.experience-list {
+        grid-template-columns: repeat(3, 1fr);
+        /* Change to 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the max-width as needed for phone screens */
+    ul.experience-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* Change to 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For very small screens */
+    ul.experience-list {
+        grid-template-columns: repeat(1, 1fr);
+        /* Change to 1 column */
+    }
 }
 
 ul.experience-list li:hover {
@@ -84,8 +113,8 @@ ul.experience-list li {
     text-align: center;
     /* Center text inside the items */
     backdrop-filter: blur(50px);
-    --webkit-backdrop-filter: blur(25px);
     transition: all 0.3s ease;
+    --webkit-backdrop-filter: blur(25px);
 }
 
 .blur50 {

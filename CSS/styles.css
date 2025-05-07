@@ -3,8 +3,8 @@ body {
     overflow: hidden;
     color: #fefeff;
     text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
-    cursor: crosshair;
     scroll-behavior: smooth;
+    cursor: none;
     margin: 0;
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
