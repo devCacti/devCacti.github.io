@@ -53,6 +53,7 @@ main {
     -ms-overflow-style: none;
     height: 100vh;
     padding: 20px;
+    scroll-behavior: smooth;
 }
 
 ul.experience-list {
@@ -60,13 +61,17 @@ ul.experience-list {
     padding: 0;
     margin: 0;
     display: grid;
-    /* Enable CSS Grid */
     grid-template-columns: repeat(3, 1fr);
-    /* Create 3 equal columns */
     gap: 20px;
-    /* Add spacing between items */
     justify-items: center;
-    /* Center items horizontally */
+}
+
+ul.experience-list li:hover {
+    background-color: rgba(69, 69, 69, 0.5);
+    transform: scale(1.075);
+    /* Change background color on hover */
+    transition: all 0.3s ease;
+    /* Smooth transition for the background color */
 }
 
 ul.experience-list li {
@@ -75,12 +80,14 @@ ul.experience-list li {
     /* Adjust padding */
     background-color: rgba(54, 54, 54, 0.237);
     border-radius: 50px;
-    min-width: 100px;
+    min-width: 125px;
     text-align: center;
     /* Center text inside the items */
     backdrop-filter: blur(50px);
     --webkit-backdrop-filter: blur(25px);
+    transition: all 0.3s ease;
 }
+
 .blur50 {
     backdrop-filter: blur(50px);
     --webkit-backdrop-filter: blur(50px);
