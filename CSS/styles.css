@@ -29,3 +29,40 @@ canvas {
     pointer-events: auto;
     z-index: -1;
 }
+
+#starrysky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Prevent stars from overflowing */
+    z-index: -1;
+    /* Place it behind other content */
+    background: rgba(0, 0, 0, 0);
+    /* Base background color */
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    /* Make the stars circular */
+    opacity: 0;
+    /* Start with invisible stars */
+    animation: twinkle 2s infinite ease-in-out;
+    /* Twinkling animation */
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

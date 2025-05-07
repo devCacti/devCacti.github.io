@@ -28,6 +28,7 @@ div.toc {
     background-color: rgba(54, 54, 54, 0.237);
     border-radius: 50px;
     cursor: crosshair;
+    box-shadow: 0 0 10px #000000;
     /* Blur Effect */
     backdrop-filter: blur(25px);
     --webkit-backdrop-filter: blur(25px);
@@ -120,7 +121,11 @@ ul.experience-list li {
 ul.experience-list li.special {
     border: 2px solid #ff00d4;
     box-shadow: 0 0 10px #ff00d4;
+}
 
+ul.experience-list li.most.special {
+    color: yellow;
+    text-shadow: 0 0 10px yellow;
 }
 
 .blur50 {

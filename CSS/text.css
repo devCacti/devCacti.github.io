@@ -73,6 +73,12 @@ a.toc-index {
     font-style: italic;
 }
 
+.small {
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+}
+
 .index-title h1,
 .index-title a {
     font-size: 2.5rem;
@@ -95,4 +101,9 @@ a.toc-index {
     justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
+}
+
+.golden {
+    color: #ffe346;
+    text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
 }
