@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     color: #fefeff;
     text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
-    cursor: none;
+    cursor: crosshair;
     scroll-behavior: smooth;
     margin: 0;
     padding-top: env(safe-area-inset-top);
@@ -28,20 +28,4 @@ canvas {
     left: 0;
     pointer-events: auto;
     z-index: -1;
-}
-
-
-h1.title {
-    text-align: center;
-    font-size: 2em;
-    text-align: center;
-    color: #fefeff;
-    margin-top: 20px;
-}
-
-h2.subtitle {
-    text-align: center;
-    font-size: 1.5em;
-    text-align: center;
-    color: #fefeff;
 }

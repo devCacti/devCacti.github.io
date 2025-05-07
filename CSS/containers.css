@@ -8,7 +8,8 @@
 div.repositories,
 div.experience,
 div.aboutme,
-div.contact {
+div.contact,
+div.toc {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -20,7 +21,7 @@ div.contact {
     padding-top: 10px;
     padding-bottom: 10px;
     width: calc(100% - 40px);
-    max-height: 500px;
+    max-height: 750px;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
@@ -29,6 +30,13 @@ div.contact {
     /* Blur Effect */
     backdrop-filter: blur(25px);
     --webkit-backdrop-filter: blur(25px);
+}
+
+.contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 br.repositories,
@@ -47,29 +55,32 @@ main {
     padding: 20px;
 }
 
-.index-title{
-    font-weight: 700;
-    color: #fff;
-    flex-direction: row;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.index-title h1,.index-title a {
-    font-size: 2.5rem;
-    color: #fff;
-
+ul.experience-list {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+    display: grid;
+    /* Enable CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Create 3 equal columns */
+    gap: 20px;
+    /* Add spacing between items */
+    justify-items: center;
+    /* Center items horizontally */
 }
 
-.index-title a {
-    text-decoration: none;
-    color: #6082ff;
+ul.experience-list li {
+    margin: 0;
+    padding: 10px 20px;
+    /* Adjust padding */
+    background-color: rgba(54, 54, 54, 0.237);
+    border-radius: 50px;
+    min-width: 100px;
+    text-align: center;
+    /* Center text inside the items */
+    backdrop-filter: blur(50px);
+    --webkit-backdrop-filter: blur(25px);
 }
-
 .blur50 {
     backdrop-filter: blur(50px);
     --webkit-backdrop-filter: blur(50px);
