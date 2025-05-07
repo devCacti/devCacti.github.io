@@ -117,6 +117,12 @@ ul.experience-list li {
     --webkit-backdrop-filter: blur(25px);
 }
 
+ul.experience-list li.special {
+    border: 2px solid #ff00d4;
+    box-shadow: 0 0 10px #ff00d4;
+
+}
+
 .blur50 {
     backdrop-filter: blur(50px);
     --webkit-backdrop-filter: blur(50px);
