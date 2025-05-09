@@ -7,12 +7,12 @@ canvas.height = canvas.clientHeight;
 
 var config = {
     TEXTURE_DOWNSAMPLE: 1,
-    DENSITY_DISSIPATION: 0.975,
+    DENSITY_DISSIPATION: 0.95,
     VELOCITY_DISSIPATION: 0.99,
-    PRESSURE_DISSIPATION: 0,
+    PRESSURE_DISSIPATION: 0.5,
     PRESSURE_ITERATIONS: 50,
     CURL: 5,
-    SPLAT_RADIUS: 0.003
+    SPLAT_RADIUS: 0.0025
 };
 
 var pointers = [];
@@ -391,33 +391,34 @@ document.addEventListener('mousemove', function (e) {
 });
 
 document.addEventListener('touchmove', function (e) {
-
     e.preventDefault();
 
-    var touches = e.targetTouches;
+    const touches = e.targetTouches;
 
     count++;
 
-    (count > 25) && (colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2], count = 0);
-
-    for (var i = 0, len = touches.length; i < len; i++) {
-
-        if (i >= pointers.length) pointers.push(new pointerPrototype());
-
-        pointers[i].id = touches[i].identifier;
-        pointers[i].down = true;
-        pointers[i].x = touches[i].pageX;
-        pointers[i].y = touches[i].pageY;
-        pointers[i].color = colorArr;
-
-        var pointer = pointers[i];
-
-        pointer.moved = pointer.down;
-        pointer.dx = (touches[i].pageX - pointer.x) * 10.0;
-        pointer.dy = (touches[i].pageY - pointer.y) * 10.0;
-        pointer.x = touches[i].pageX;
-        pointer.y = touches[i].pageY;
-
+    if (count > 25) {
+        colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+        count = 0;
     }
 
+    for (let i = 0; i < touches.length; i++) {
+        if (i >= pointers.length) pointers.push(new pointerPrototype());
+
+        const touch = touches[i];
+        const pointer = pointers[i];
+
+        const rect = canvas.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+
+        pointer.id = touch.identifier;
+        pointer.down = true;
+        pointer.color = colorArr;
+        pointer.moved = true;
+        pointer.dx = (x - pointer.x) * 10.0;
+        pointer.dy = (y - pointer.y) * 10.0;
+        pointer.x = x;
+        pointer.y = y;
+    }
 }, false);
