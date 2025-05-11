@@ -375,20 +375,37 @@ var count = 0;
 var colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
 
 document.addEventListener('mousemove', function (e) {
+    e.preventDefault();
+
+    const touches = e.targetTouches;
 
     count++;
 
-    (count > 25) && (colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2], count = 0);
+    if (count > 25) {
+        colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+        count = 0;
+    }
 
-    pointers[0].down = true;
-    pointers[0].color = colorArr;
-    pointers[0].moved = true;
-    pointers[0].dx = (e.clientX - pointers[0].x) * 10.0;
-    pointers[0].dy = (e.clientY - pointers[0].y) * 10.0;
-    pointers[0].x = e.clientX;
-    pointers[0].y = e.clientY;
+    for (let i = 0; i < touches.length; i++) {
+        if (i >= pointers.length) pointers.push(new pointerPrototype());
 
-});
+        const touch = touches[i];
+        const pointer = pointers[i];
+
+        const rect = canvas.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+
+        pointer.id = touch.identifier;
+        pointer.down = true;
+        pointer.color = colorArr;
+        pointer.moved = true;
+        pointer.dx = (x - pointer.x) * 10.0;
+        pointer.dy = (y - pointer.y) * 10.0;
+        pointer.x = x;
+        pointer.y = y;
+    }
+}, false);
 
 document.addEventListener('touchmove', function (e) {
     e.preventDefault();
