@@ -28,13 +28,8 @@ canvas {
     left: 0;
     pointer-events: all;
     z-index: -1;
-    touch-action: manipulation;
-    /* allows gestures like scroll, tap */
-    user-select: none;
-    /* prevents accidental text selection */
-    -webkit-user-drag: none;
-    /* prevents image drag ghosting on iOS */
 }
+
 #starrysky {
     position: fixed;
     top: 0;
