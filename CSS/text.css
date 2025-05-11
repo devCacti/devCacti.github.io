@@ -107,3 +107,13 @@ a.toc-index {
     color: #ffe346;
     text-shadow: rgb(0, 0, 0, 1) 0px 0px 15px;
 }
+
+.heart {
+    color: #ff0deb !important;
+    text-shadow: #ff00ea 0px 0px 15px;
+}
+
+footer div p {
+    margin: 10px;
+
+}
