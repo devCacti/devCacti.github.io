@@ -56,6 +56,8 @@ main {
     height: 100vh;
     padding: 20px;
     scroll-behavior: smooth;
+    touch-action: manipulation;
+    /* allows scrolling but still triggers touches */
 }
 
 footer {

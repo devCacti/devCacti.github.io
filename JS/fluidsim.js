@@ -422,3 +422,39 @@ document.addEventListener('touchmove', function (e) {
         pointer.y = y;
     }
 }, false);
+
+canvas.addEventListener('pointermove', function (e) {
+    count++;
+
+    if (count > 25) {
+        colorArr = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+        count = 0;
+    }
+
+    // Make sure there's at least one pointer
+    if (pointers.length === 0) pointers.push(new pointerPrototype());
+
+    // Pick pointer by ID or just use index 0 for mouse
+    let index = 0;
+
+    // Try to reuse pointer IDs for multitouch
+    if (e.pointerId !== undefined) {
+        index = e.pointerId;
+        if (!pointers[index]) pointers[index] = new pointerPrototype();
+    }
+
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const pointer = pointers[index];
+
+    pointer.id = e.pointerId || 0;
+    pointer.down = true;
+    pointer.color = colorArr;
+    pointer.moved = true;
+    pointer.dx = (x - pointer.x) * 10.0;
+    pointer.dy = (y - pointer.y) * 10.0;
+    pointer.x = x;
+    pointer.y = y;
+});
