@@ -26,7 +26,7 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: auto;
+    pointer-events: all;
     z-index: -1;
 }
 
